@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/custom_button.dart';
 
-class SplashPage extends StatelessWidget {
+import 'splash_controller.dart';
+
+class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
@@ -38,9 +40,7 @@ class SplashPage extends StatelessWidget {
                   CustomButton(
                     text: 'ACESSAR',
                     width: context.widthTransformer(reducedBy: 40),
-                    onPressed: () {
-                      Get.toNamed('/auth/login');
-                    },
+                    onPressed: () => controller.checkLogged(),
                   ),
                 ],
               ),
