@@ -3,6 +3,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:vakinha_burger_mobile/app/core/bindings/app_bindings.dart';
 import 'package:vakinha_burger_mobile/app/routes/auth_routers.dart';
+import 'package:vakinha_burger_mobile/app/routes/orders_routers.dart';
 import 'package:vakinha_burger_mobile/app/routes/product_routers.dart';
 import 'app/core/ui/app_ui.dart';
 import 'app/routes/home_routers.dart';
@@ -27,6 +28,7 @@ class VakinhaBurgerMainApp extends StatelessWidget {
         ...AuthRouters.routers,
         ...HomeRouters.routers,
         ...ProductRouters.routers,
+        ...OrdersRouters.routers,
       ],
     );
   }
